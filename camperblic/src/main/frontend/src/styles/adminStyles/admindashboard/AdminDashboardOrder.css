@@ -1,0 +1,64 @@
+.admindashboard_container{
+    /*margin-left: 280px;*/
+    /*padding-top: 30px;*/
+}
+
+.admindashboard_container {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+
+    /*height: 100vh;*/
+}
+
+.admindashboard_orderTest table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admindashboard_orderTest th,
+.admindashboard_orderTest td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.admindashboard_orderTest th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.admindashboard_orderTest tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admindashboard_orderTest tr:hover {
+    background-color: #ebebeb;
+}
+
+.admindashboard_orderTest th,
+.admindashboard_orderTest td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    width: 150px; /* 칸의 넓이를 조정하세요 */
+}
+
+.tab_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #ccc;
+}

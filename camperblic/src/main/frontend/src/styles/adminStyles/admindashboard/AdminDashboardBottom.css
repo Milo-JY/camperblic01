@@ -1,0 +1,8 @@
+.admindashboard_bottom{
+    /*margin-left: 250px;*/
+    display: flex;
+    justify-content: space-between;
+    height:400px;
+    
+    /*background-color: aqua;*/
+}

@@ -1,0 +1,12 @@
+.adminStock_container{
+
+}
+
+.adminStock_title{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid;
+    padding-top: 25px;
+    padding-left: 25px;
+}

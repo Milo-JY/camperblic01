@@ -1,0 +1,63 @@
+.AdminBoard_table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.AdminBoardFormth {
+    background-color: #f0f0f0;
+    color: #333;
+    height: 40px; /* Increase the height of th elements */
+}
+
+.AdminBoardFormtd {
+    text-align: center;
+    border: 1px solid #ccc;
+
+}
+
+.AdminBoardFormtdcenter {
+    vertical-align: middle;
+    height: 40px;
+}
+
+.AdminBoardFormth:nth-child(1) {
+    width: 5%;
+}
+
+.AdminBoardFormth:nth-child(2) {
+    width: 10%;
+}
+
+.AdminBoardFormth:nth-child(3) {
+    width: 40%; /* Increase the width of the "제목" column */
+}
+
+.AdminBoardFormth:nth-child(4) {
+    width: 10%; /* Adjust the width of the "작성일" column */
+}
+
+.AdminBoardFormth:nth-child(5) {
+    width: 10%;
+}
+
+.AdminBoardFormth:nth-child(6) {
+    width: 5%;
+}
+
+.AdminBoardFormth:nth-child(4),
+.AdminBoardFormtd:nth-child(4) {
+    padding-left: 20px;
+}
+
+.adminBoardForm_btn {
+    padding: 5px 10px;
+    background-color: #555555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.adminBoardForm_btn:hover {
+    background-color: #333333;
+}

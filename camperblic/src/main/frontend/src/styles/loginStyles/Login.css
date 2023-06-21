@@ -1,0 +1,62 @@
+.loginMainDiv{
+    height: 1000px;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginFormDiv {
+    height: 500px;
+    width: 600px;
+
+    background-color: #61dafb;
+    border: 3px white groove;
+}
+.borderDiv {
+    height: 80%;
+    border: 2px groove slategray;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginMainDiv .loginFormDiv .loginH1{
+    height: 20%;
+
+    border: none;
+    justify-content: center;
+}
+.inputMainDiv input {
+    height: 30px;
+    width: 400px;
+
+    display: block;
+    margin: 30px;
+
+    border: none;
+    border-radius: 2%;
+}
+.loginBtn {
+    cursor: pointer;
+    background-color: white;
+
+    width: 60%;
+    height: 60px;
+
+    border: none;
+    border-radius: 5%;
+}
+.linkTODiv{
+    background-color: chartreuse;
+}
+
+.linkTo{
+    color: black;
+}
+
+.linkTo::after{
+    content: '  |  ';
+}

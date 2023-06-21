@@ -1,0 +1,40 @@
+.admindashboard_board{
+    width: 50%;
+    background-color: cornflowerblue;
+}
+
+.admindashboard_boardtitle{
+    font-size: 20px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+
+}
+
+.admindashboard_boardcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admindashboard_boardtable{
+    width: 90%;
+    border: 1px solid;
+    display: inline-block;
+    margin: auto 0;
+}
+
+.admindashboard_boardth{
+    width: 33%;
+    text-align: center;
+}
+
+.admindashboard_boardtableth{
+    border-bottom: 1px dashed;
+
+}
+
+.admindashboard_boardtableth,
+.admindashboard_boardtabletd{
+    display: flex;
+    justify-content: space-around;
+}
