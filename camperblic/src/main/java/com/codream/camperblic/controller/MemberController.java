@@ -26,7 +26,9 @@ public class MemberController {
     private final JwtUtil jwtUtil;
     private PasswordEncoder passwordEncoder;
 
+    public void hihi(){
 
+    };
     @Autowired
     public MemberController(MemberService memberService, PasswordEncoder passwordEncoder, JwtUtil jwtUtil) {
         this.memberService = memberService;
