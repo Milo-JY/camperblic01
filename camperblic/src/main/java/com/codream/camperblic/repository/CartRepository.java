@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CartRepository {
 
-    List<Cart> findByCartList(String memberid);
+    List<Cart> findAllByCartList(String userid);
 
     Cart save(Cart cart);
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../../styles/paymentStyles/ItemlistCart.css"
 import {Cart} from "./Cart";
 
@@ -7,6 +7,22 @@ interface ItemlistCartProps {
 }
 
 const ItemlistCart: React.FC<ItemlistCartProps> = ({carts}) => {
+
+   const handleChange
+
+    const handleCountChange = (count: number, cartId: string) => {
+        const updatedCarts = carts.map((cart) => {
+            if (cart.itemid === cartId) {
+                return {
+                    ...cart,
+                    itemcount: count
+                };
+            }
+            return cart;
+        });
+        // 카트 업데이트
+        // ...
+    };
 
     return (
         <div className="item_cart">
@@ -86,7 +102,13 @@ const ItemlistCart: React.FC<ItemlistCartProps> = ({carts}) => {
                             </td>
                             {/* 수량변경 버튼 */}
                             <td key={cart.itemcount} title="수량변경" className="item_count">
-                                <input type="number" min="1" max="100" value={cart.itemcount}/>
+                                <input
+                                    className="item_count"
+                                    type="number"
+                                    min="1" max="100"
+                                    value={cart.itemcount}
+                                    onChange={handleChange}
+                                />
                             </td>
                             <td className="pay">
                                 <div className="price">

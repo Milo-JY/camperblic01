@@ -11,14 +11,15 @@ public class Cart {
     @Column(name = "cartid")
     private int cartid;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userid")
-    private Member userid;  // 로그인 확인 된 회원ID
+    private String userid;  // 로그인 확인 된 회원ID
 
 
     private String itemid;
 
     private int itemcount;  // 카트에 담긴 상품 개수
+
+    @Column(name = "category_id")
+    private String category_id;
 
     public Cart() {
 
@@ -36,11 +37,12 @@ public class Cart {
         this.cartid = cartid;
     }
 
-    public Member getUserid() {
+
+    public String getUserid() {
         return userid;
     }
 
-    public void setUserid(Member userid) {
+    public void setUserid(String userid) {
         this.userid = userid;
     }
 
@@ -60,5 +62,11 @@ public class Cart {
         this.itemcount = itemcount;
     }
 
+    public String getCategory_id() {
+        return category_id;
+    }
 
+    public void setCategory_id(String category_id) {
+        this.category_id = category_id;
+    }
 }

@@ -10,6 +10,7 @@ export interface Cart {
     userid: string,
     itemid: string,
     itemcount: number,
+    category_id: string,
 }
 
 const Cart = () => {
@@ -18,17 +19,14 @@ const Cart = () => {
     const [carts, setCarts] = useState<Cart[]>([]);
 
     useEffect(() => {
-        axios.get('/cart', {
-            params: {
-                userid: userid
-            }
+        axios.get('/cart', {withCredentials : true
         })
             .then(response => {
                 console.log(response.data);
                 setCarts(response.data);
             })
             .catch(error => console.log(error))
-    }, [userid]);
+    }, []);
 
     return (
         <section className="cartLayout">

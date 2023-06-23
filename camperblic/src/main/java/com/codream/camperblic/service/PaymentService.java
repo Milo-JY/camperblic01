@@ -17,7 +17,7 @@ public class PaymentService {
     CartRepository cartRepository;
 
     public List<Cart> findByCartList(String userid) {
-        return cartRepository.findByCartList(userid);
+        return cartRepository.findAllByCartList(userid);
     }
 
     public Cart addCart(Cart cart) { return cartRepository.save(cart); }

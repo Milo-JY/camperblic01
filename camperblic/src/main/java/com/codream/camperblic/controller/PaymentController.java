@@ -2,11 +2,10 @@ package com.codream.camperblic.controller;
 
 import com.codream.camperblic.domain.payment.Cart;
 import com.codream.camperblic.service.PaymentService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -16,14 +15,19 @@ import java.util.List;
 public class PaymentController {
 
     private final PaymentService paymentService;
-
+    private final JwtUtil jwtUtil;
     @Autowired
-    public PaymentController(PaymentService paymentService) {
+    public PaymentController(com.codream.camperblic.service.PaymentService paymentService, com.codream.camperblic.controller.JwtUtil jwtUtil) {
         this.paymentService = paymentService;
+        this.jwtUtil = jwtUtil;
     }
 
     @GetMapping("/cart")
-    public ResponseEntity<List<Cart>> getCartByUserId(@RequestParam String userid) {
+    public ResponseEntity<List<Cart>> getCartByUserId(@org.springframework.web.bind.annotation.CookieValue(value = "token", required = false) String token) {
+        if (!jwtUtil.validateToken(token)) {
+            return ResponseEntity.status(org.springframework.http.HttpStatus.UNAUTHORIZED).body(null);
+        }
+        String userid = jwtUtil.getUseridFromToken(token);
         List<Cart> cartList = paymentService.findByCartList(userid);
 
         if (!cartList.isEmpty()) {

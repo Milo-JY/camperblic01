@@ -69,19 +69,19 @@
     margin-left: 10px;
 }
 
-table {
+.table_wrap table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
 
-th,
-td {
+.table_wrap th,
+.table_wrap td {
     padding: 10px;
     text-align: center;
 }
 
-th {
+.table_wrap th {
     background-color: #f1f1f1;
 }
 

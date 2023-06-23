@@ -1,11 +1,14 @@
 import React from 'react';
 import "../../styles/paymentStyles/ChargeBox.css";
+import Cart from "./Cart";
 const ChargeBox = () => {
+
+
     return (
-        <div className={'charge_section'}>
-            <div className={'charge_area'}>
-                <div className={'count_area'}>
-                    <div className={'count_item'}>
+        <div className="charge_section">
+            <div className="charge_area">
+                <div className="count_area">
+                    <div className="count_item">
                         <span className={'title'}>선택 상품 수</span>
                         <span className={'data positive'}>1개</span>
                     </div>

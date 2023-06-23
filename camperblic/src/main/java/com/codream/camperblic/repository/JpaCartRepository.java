@@ -21,10 +21,10 @@ public class JpaCartRepository implements CartRepository{
     }
 
     @Override
-    public List<Cart> findByCartList(String userid) {
-        TypedQuery<Cart> query = em.createQuery("SELECT c FROM Cart c WHERE c.userid = :userid", Cart.class)
-                .setParameter("userid", userid);
-        return query.getResultList();
+    public List<Cart> findAllByCartList(String userid) {
+        return em.createQuery("SELECT c FROM Cart c WHERE c.userid = :userid", Cart.class)
+                .setParameter("userid", userid).getResultList();
+
     }
 
     @Override
